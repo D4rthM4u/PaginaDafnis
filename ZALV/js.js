@@ -1,24 +1,23 @@
-const showNavigator = () => {
-  const nav = document.getElementById("navigator");
-  if (nav) {
-    console.log("Enter");
-    if (nav.classList.contains("hide")) nav.classList.remove("hide");
-    else nav.classList.add("hide");
-  }
-};
-const showPage = (page) => {
+const showPage = (pageEntered) => {
   showNavigator();
-  let pages = {};
-  let value = 1;
-  while (true) {
-    if (document.getElementById(`page${value}`))
-      pages[`page${value}`] = document.getElementById(`page${value}`);
-    else break;
-    value++;
-  }
-  for (let x = 0; x < value; x++) {
-    if (!pages[`page${x + 1}`]) continue;
-    if (page != x + 1) pages[`page${x + 1}`].classList.add("hidden");
-    else pages[`page${x + 1}`].classList.remove("hidden");
-  }
+  const pages = {};
+  const allPages = document.querySelectorAll('main[id^="page"]');
+
+  allPages.forEach((page, index) => {
+    const pageId = `page${index + 1}`;
+    pages[pageId] = page;
+    if (pageId != `page${pageEntered}`) page.classList.add("hidden");
+    else page.classList.remove("hidden");
+  });
 };
+
+const resizeIframe = (iframe) =>
+  (iframe.style.height =
+    iframe.contentWindow.document.body.scrollHeight + 100 + "px");
+
+window.addEventListener("message", function (event) {
+  if (event.origin === window.location.origin) {
+    const iframe = document.getElementById("contentFrame");
+    iframe.style.height = event.data + "px";
+  }
+});

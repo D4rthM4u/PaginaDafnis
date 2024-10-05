@@ -3,45 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Apple</title>
+    <script src="./ZALV/js.js" async></script>
+    <link rel="stylesheet" href="./ZALV/styles.css" />
   </head>
   <body>
-    <nav>
-      <div>
-        <h1>Nombre de Empresa</h1>
-      </div>
-      <ul>
-        <li><a href="">Inicio</a></li>
-        <li><a href="">Contacto</a></li>
-        <li><a href="">Productos</a></li>
-        <li><a href="">Servicios</a></li>
-      </ul>
-      <main>
-        <div>
-          <h2>Servicios</h2>
-          <img
-            src="./assets/Garantizar-que-la-gestion-de-servicios-de-TI-Rberny-2023-1024x853.jpg"
-            alt="Descripcion de servicios"
-          />
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem
-            perferendis eos saepe fugiat vero beatae dignissimos ipsam ab quae
-            quasi pariatur, sint architecto ipsa! A, eius consequatur? Ipsum,
-            voluptate saepe?
-          </p>
-          <h4><a href="">mas...</a></h4>
-        </div>
-      </main>
-      <section>
-        <h3>Contactanos</h3>
-        <form action="">
-          <input type="text" placeholder="Nombre" />
-          <br />
-          <input type="mail" placeholder="Correo" />
-          <br />
-          <button type="submit">Enviar</button>
-        </form>
-      </section>
+    <!-- Barra de navegacion *SE MANEjA MEDIANTE JS* -->
+    <nav class="nav" id="navigator">
+      <button type="button" class="buttons" onclick="showPage(1)">AI</button>
+      <button type="button" class="buttons" onclick="showPage(2)">IDK</button>
+      <button type="button" class="buttons" onclick="showPage(3)">IDK</button>
+      <button type="button" class="buttons" onclick="showPage(4)">IDK</button>
+      <button type="button" class="buttons" onclick="showPage(5)">IDK</button>
     </nav>
+
+    <main class="page1" id="page1">
+      <iframe src="" frameborder="0" onload="resizeIframe(this)"></iframe>
+    </main>
+    <main class="page2 hidden" id="page2">
+      <iframe src="" frameborder="0" onload="resizeIframe(this)"></iframe>
+    </main>
+    <main class="page3 hidden" id="page3">
+      <iframe src="" frameborder="0" onload="resizeIframe(this)"></iframe>
+    </main>
+    <main class="page4 hidden" id="page4">
+      <iframe src="" frameborder="0" onload="resizeIframe(this)"></iframe>
+    </main>
   </body>
 </html>
