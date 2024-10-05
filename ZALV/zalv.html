@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IDK</title>
+    <script src="./js.js" async></script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <input
+      onclick="showNavigator()"
+      class="buttonShow"
+      type="button"
+      value="show"
+    />
+    <!-- Barra de navegacion *SE MANEjA MEDIANTE JS* -->
+    <nav class="nav hide" id="navigator">
+      <button
+        type="button"
+        class="buttons"
+        onclick="showPage(1)"
+        onmouseover="document.getElementById('message1').innerHTML = 'Page made by Zaid Legarda'"
+        onmouseout="document.getElementById('message1').innerHTML = ''"
+      >
+        Page1
+        <p id="message1" class="message"></p>
+      </button>
+      <button
+        type="button"
+        class="buttons"
+        onclick="showPage(2)"
+        onmouseover="document.getElementById('message2').innerHTML = 'Page made by Daniel Beltran'"
+        onmouseout="document.getElementById('message2').innerHTML = ''"
+      >
+        Page2
+        <p id="message2" class="message"></p>
+      </button>
+      <button
+        type="button"
+        class="buttons"
+        onclick="showPage(3)"
+        onmouseover="document.getElementById('message3').innerHTML = 'Page made by Mauro Franco'"
+        onmouseout="document.getElementById('message3').innerHTML = ''"
+      >
+        Page3
+        <p id="message3" class="message"></p>
+      </button>
+      <button
+        type="button"
+        class="buttons"
+        onclick="showPage(4)"
+        onmouseover="document.getElementById('message4').innerHTML = 'Page made by Karen Terrazas'"
+        onmouseout="document.getElementById('message4').innerHTML = ''"
+      >
+        Page4
+        <p id="message4" class="message"></p>
+      </button>
+      <button
+        type="button"
+        class="buttons"
+        onclick="showPage(5)"
+        onmouseover="document.getElementById('message5').innerHTML = 'Page made by Luis Castillo'"
+        onmouseout="document.getElementById('message5').innerHTML = ''"
+      >
+        Page5
+        <p id="message5" class="message"></p>
+      </button>
+    </nav>
+
+    <main class="page1" id="page1">
+      <div>
+        <p>Page1</p>
+      </div>
+    </main>
+    <main class="page2 hidden" id="page2">
+      <div>
+        <p>Page2</p>
+      </div>
+    </main>
+    <main class="page3 hidden" id="page3">
+      <div>
+        <p>Page3</p>
+      </div>
+    </main>
+    <main class="page4 hidden" id="page4">
+      <div>
+        <p>Page4</p>
+      </div>
+    </main>
+    <main class="page5 hidden" id="page5">
+      <div>
+        <p>Page5</p>
+      </div>
+    </main>
+  </body>
+</html>

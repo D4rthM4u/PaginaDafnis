@@ -1,0 +1,66 @@
+.buttonShow {
+  background-color: aquamarine;
+  color: black;
+  border: none;
+  border-radius: 1em;
+  margin: 1em;
+  margin-bottom: 0;
+  padding: 2svh;
+  transition: all 750ms ease;
+}
+.buttonShow:hover {
+  cursor: pointer;
+  background: #333;
+  color: white;
+  scale: 0.8;
+}
+.hidden {
+  display: none;
+}
+.nav {
+  position: fixed;
+  opacity: 1;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 10px;
+  top: 30;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  transition: opacity ease 500ms;
+}
+.hide {
+  opacity: 0;
+}
+
+.buttons {
+  background-color: #008cba;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 1s ease, scale 500ms ease;
+}
+
+.buttons:hover {
+  background-color: #005f6b;
+  scale: 0.8;
+  .message {
+    display: block;
+  }
+}
+.message {
+  display: none;
+  position: absolute;
+  top: 10;
+  background: #005f6b;
+  color: white;
+  left: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 1svh;
+  border-bottom-left-radius: 1svh;
+  border-bottom-right-radius: 1svh;
+  transition: all 1s ease;
+}
