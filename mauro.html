@@ -1,62 +1,106 @@
-<!--"Indica que estamos utilizando HTML5"-->
+<!--Declara el tipo de documento como HTML5-->
 <!DOCTYPE html>
-
-<!--"Define el idioma de la página como español"-->
 <html lang="es">
 <head>
 
-<!--"Establece la codificación de caracteres en UTF-8"-->
+<!--Establece codificación de caracteres en UTF-8-->
     <meta charset="UTF-8">
 
-<!--"Hace que el sitio funcione en dispositivos móviles"-->
+<!--Asegura que el diseño sea adaptable a dispositivos móviles-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Web</title>
+    <meta name="description" content="Página sencilla sobre el Apple Watch">
+    <title>Apple Watch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .container {
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        article {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
 </head>
 <body>
 
-<!--"Contiene el título principal de la página"-->
+<!--Contiene el título principal de la página-->
     <header>
-        <h1>Oli crayoli</h1>
+        <h1>Bienvenidos al Mundo del Apple Watch</h1>
     </header>
 
-<!--"Barra de navegación simple con una lista de enlaces (no se verá como un menú de navegación sin CSS)"-->
+<!--Incluye enlaces internos a las secciones de la página-->
     <nav>
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Sobre mí</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
+        <a href="#historia">Historia</a>
+        <a href="#caracteristicas">Características</a>
+        <a href="#modelos">Modelos</a>
     </nav>
 
-<!--"Agrupa contenido relacionado. Una sección para "Sobre mí" y otra para el formulario de contacto"-->
-    <section>
-        <h2>Sobre mí</h2>
-        <p>Cuando una mujer me gusta, me gusta a pesar de todo... 
-            Me gustan las altas y las chaparritas, las flacas, las gordas y las chiquititas,
-            solteras y viudas y divorciaditas, me encantan las chatas de caras bonitas</p>
-    </section>
+    <div class="container">
 
-    <section>
-        <h2>Contacto</h2>
+<!--Cada sección de contenido principal está envuelta en una etiqueta <article> de HTML5-->
+        <article id="historia">
+            <h2>Historia del Apple Watch</h2>
+            <p>El Apple Watch fue lanzado por primera vez en 2015 como parte de la gama de productos de Apple. Su propósito es ofrecer una combinación de tecnología y moda con un enfoque en la salud y el bienestar.</p>
+        </article>
 
-<!--"Un formulario de contacto básico con etiquetas label, inputs y un área de texto textarea"-->
-        <form>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre">
+        <article id="caracteristicas">
+            <h2>Características Principales</h2>
 
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email">
+<!--Lista no ordenada que describe las características del Apple Watch-->
+            <ul>
+                <li>Monitoreo de ritmo cardíaco</li>
+                <li>Notificaciones en tiempo real</li>
+                <li>Seguimiento de actividad física</li>
+                <li>Conectividad con otros dispositivos Apple</li>
+            </ul>
+        </article>
 
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje"></textarea>
+        <article id="modelos">
+            <h2>Modelos Disponibles</h2>
+            <p>El Apple Watch está disponible en varias versiones, incluyendo el Apple Watch Series 6, Apple Watch SE, y la última versión, Apple Watch Series 7. Cada modelo ofrece mejoras en rendimiento, diseño y funciones de salud.</p>
+        </article>
+    </div>
 
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-
-<!--"Pie de página simple con información de derechos de autor."-->
+<!--Información final de la página-->
     <footer>
-        <p>Dafnis regrésame a los niños, también son mis hijos</p>
+        <p>&copy; 2024 Apple Watch Fans</p>
     </footer>
 
 </body>
